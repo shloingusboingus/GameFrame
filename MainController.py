@@ -1,13 +1,8 @@
 #!/usr/bin/python3
 
-import os
 import sys
 import pygame
-import platform
 from GameFrame import Globals
-
-# if platform.system() == "Windows":
-#     os.environ['SDL_VIDEODRIVER'] = 'directx'
 
 pygame.mixer.pre_init(44100, -16, 2, 2048)
 pygame.mixer.init()
@@ -22,8 +17,7 @@ for joystick in joysticks:
 pygame.display.set_caption(Globals.window_name)
 window_size = (Globals.SCREEN_WIDTH, Globals.SCREEN_HEIGHT)
 screen = pygame.display.set_mode(window_size,
-                                 pygame.DOUBLEBUF | pygame.HWSURFACE,
-                                 32)
+                                 pygame.DOUBLEBUF, 32)
 
 Globals.next_level = Globals.start_level
 levels = Globals.levels
@@ -34,7 +28,7 @@ while Globals.running:
     curr_level = Globals.next_level
     Globals.next_level += 1
     Globals.next_level %= len(levels)
-    mod_name = "Rooms.{}".format(levels[curr_level])
+    mod_name = f"Rooms.{levels[curr_level]}"
     mod = __import__(mod_name)
     class_name = getattr(mod, levels[curr_level])
     room = class_name(screen, joysticks)
