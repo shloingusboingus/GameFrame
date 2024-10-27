@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import MainController
 import sys
 import pygame
 from GameFrame import Globals
