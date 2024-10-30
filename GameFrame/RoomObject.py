@@ -23,7 +23,7 @@ class RoomObject:
         self.y_speed = 0
         self.gravity = 0
         self.handle_key_events = False
-        self.handle_mouse_events = False
+        self.handle_mouse_events = True
         self.angle = 0
 
         self.collision_object_types = set()

@@ -1,1 +1,3 @@
 from Rooms.shrimpfriedriceyouretellingmeashrimpfriedthisrice import shrimpfriedriceyouretellingmeashrimpfriedthisrice
+from Rooms.itsumimario import tralala
+from Rooms.acrylicyouretellingmeakrilllickedthispaint import meepdeepy
