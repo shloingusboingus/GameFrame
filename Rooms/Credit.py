@@ -1,10 +1,10 @@
-#gameplay room :|
+#credits
 
 from GameFrame import Level
 
-class tralala(Level):
+class Credit(Level):
     def __init__(self, screen, joysticks):
         Level.__init__(self, screen, joysticks)
         
         # set background image
-        self.set_background_image("ihatethis.png")
+       #make background image self.set_background_image("insert image.png")
