@@ -16,7 +16,7 @@ class Globals:
     window_name = 'Heart of Gold'
 
     # - Set the order of the rooms - #
-    levels = ["Starter", "Credit", "Game"]
+    levels = ["Starter", "Game", "Credit"]
 
     # - Set the starting level - #
     start_level = 0

@@ -15,9 +15,9 @@ class Startbutton(RoomObject):
     def clicked(self, button_number):
         if button_number == 1:
             #sets the next level to whatever the text is in the index section
-            Globals.next_level = Globals.levels.index('Credit')
+            Globals.next_level = Globals.levels.index('Game')
             #stop this level so it goes to the next
-            Globals.running = False
+            self.room.running = False
             print("next level")
 
 
