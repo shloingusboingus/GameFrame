@@ -9,5 +9,5 @@ class Game(Level):
         # set background image
         self.set_background_image("mm.png")
 
-        # add HEART
-        self.add_room_object(babum(self, 25, 745))
+        # add HEART (player)
+        self.add_room_object(babum(self, 600, 745))
