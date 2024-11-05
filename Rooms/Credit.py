@@ -1,5 +1,4 @@
 #credits
-
 from GameFrame import Level
 
 class Credit(Level):
@@ -7,4 +6,4 @@ class Credit(Level):
         Level.__init__(self, screen, joysticks)
         
         # set background image
-       #make background image self.set_background_image("insert image.png")
+        self.set_background_image("w.png")
