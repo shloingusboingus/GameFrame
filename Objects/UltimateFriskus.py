@@ -9,7 +9,7 @@ class babum(RoomObject):
         
         # make frisk 
         image = self.load_image("mlub.png")
-        self.set_image(image,100,100)
+        self.set_image(image,50,50)
         
         # register events
         self.handle_key_events = True
@@ -17,7 +17,9 @@ class babum(RoomObject):
     def key_pressed(self, key):
 
         
-        if key[pygame.K_w]:
-            self.y_speed = -10
-        elif key[pygame.K_s]:
-            self.y_speed = 10
+        if key[pygame.K_a]:
+            self.x_speed -= 10
+        elif key[pygame.K_d]:
+            self.x_speed += 10
+
+            
