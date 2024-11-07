@@ -19,4 +19,4 @@ class Starter(Level):
 
         self.add_room_object(Creditbutton(self, 525, 500))
 
-        self.add_room_object(Leavebutton(self, 550, 650))
+        self.add_room_object(Leavebutton(self, 547, 650))

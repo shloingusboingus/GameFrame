@@ -2,6 +2,7 @@
 from GameFrame import RoomObject, Globals
 import pygame
 
+#BIRTH OF A GOD
 class babum(RoomObject):
     
     def __init__(self, room, x, y):
@@ -13,25 +14,24 @@ class babum(RoomObject):
         
         # register events
         self.handle_key_events = True
-        
+
+#MOVE  
     def key_pressed(self, key):
 
-        if key[pygame.K_a]:
-            self.x -= 10
-        elif key[pygame.K_d]:
-            self.x += 10
+        
+        if key[pygame.K_LEFT]:
+            self.x -= 50
+        elif key[pygame.K_RIGHT]:
+            self.x += 50
 
+
+#BORDERS
     def keep_in_room(self):
        
-        if self.x < 400:
-            self.x = 400
-        elif self.x + self.height> Globals.SCREEN_WIDTH:
-            self.x = Globals.SCREEN_WIDTH - self.height
-        
-        if self.x < -880:
+        if self.x < 380:
+            self.x = 380
+        elif self.x > 880:
             self.x = 880
-        elif self.x + self.height> Globals.SCREEN_WIDTH:
-            self.x = Globals.SCREEN_WIDTH - self.height
 
     def step(self):
         self.keep_in_room()
