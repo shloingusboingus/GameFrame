@@ -1,3 +1,4 @@
+#enemy projectile
 from GameFrame import RoomObject, Globals
 import random
 
@@ -10,27 +11,25 @@ class BONETROUSEL(RoomObject):
         
         # set image
         image = self.load_image("AE.png")
-        self.set_image(image,50,49)
-
+        self.set_image(image,25,25)
         
         # set travel direction
-        angle = random.randint(135,225)
-        self.set_direction(angle, 10)
+        self.set_direction(90, 5)
+
+        
+        self.register_collision_object("babum")
         
 
     def step(self):
-        self.keep_in_room()
         self.outside_of_room()
         
-    def keep_in_room(self):
-        if self.x < 380:
-            self.x = 380
-            self.x_speed *= -1
-        elif self.x > 880:
-            self.x = 880
-            self.x_speed *= -1
-            
     def outside_of_room(self):
         if self.x + self.width < 0:
             print("Bullet redirected into american school")
             self.room.delete_object(self)
+            
+    def handle_collision(self, other, other_type):        
+        if other_type == "babum":
+            Globals.next_level = Globals.levels.index('Starter')
+            #stop this level so it goes to the next
+            self.room.running = False

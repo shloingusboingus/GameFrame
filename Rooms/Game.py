@@ -2,6 +2,7 @@
 from GameFrame import Level
 from Objects.UltimateFriskus import babum
 from Objects.ismettatonWOKEnow import metatito
+from Objects.METAphysics import metatitoo
 
 class Game(Level):
     def __init__(self, screen, joysticks):
@@ -14,18 +15,20 @@ class Game(Level):
         self.add_room_object(babum(self, 600, 745))
         
         # add metatito (top row)
-        self.add_room_object(metatito(self, 500, 50))
-        self.add_room_object(metatito(self, 585, 50))
-        self.add_room_object(metatito(self, 670, 50))
-        self.add_room_object(metatito(self, 755, 50))
+#        self.add_room_object(metatitooo(self, 500, 50))
+ #       self.add_room_object(metatitooo(self, 585, 50))
+  #      self.add_room_object(metatitooo(self, 670, 50))
+   #     self.add_room_object(metatitooo(self, 755, 50))
         
 
         # add metatito (middle row)
-        self.add_room_object(metatito(self, 450, 110))
-        self.add_room_object(metatito(self, 535, 110))
-        self.add_room_object(metatito(self, 620, 110))
-        self.add_room_object(metatito(self, 705, 110))
-        self.add_room_object(metatito(self, 790, 110))
+        self.add_room_object(metatitoo(self, 350, 110))
+        self.add_room_object(metatitoo(self, 465, 110))
+        self.add_room_object(metatitoo(self, 550, 110))
+        self.add_room_object(metatitoo(self, 640, 110))
+        self.add_room_object(metatitoo(self, 730, 110))
+        self.add_room_object(metatitoo(self, 830, 110))
+        
 
 
         # add metatito (bottom row)
