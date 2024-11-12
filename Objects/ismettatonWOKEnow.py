@@ -30,19 +30,19 @@ class metatito(RoomObject):
             self.x = 380
         elif self.x > 880:
             self.x = 880
-          #if self.x < 380 or self.x > 880 - self.width:
-           # self.x_speed *= -1
+        if self.x < 380 or self.x > 880 - self.width:
+            self.x_speed *= -1
             
-#    def step(self):
-#        self.keep_in_room()
+    def step(self):
+        self.keep_in_room()
        
         # PULL THE LEVER KRONK
-#    def bulletito(self):
+    def bulletito(self):
         
         #birth of the darkness
-#        new_bulletito = BONETROUSEL(self.room, self.x, self.y + self.height/2)
-#        self.room.add_room_object(new_bulletito)
+        new_bulletito = BONETROUSEL(self.room, self.x, self.y + self.height/2)
+        self.room.add_room_object(new_bulletito)
         
         #WRONG LEVEEERR
-#        gatling_bullet_spawn_time = random.randint(15, 150)
-#        self.set_timer(gatling_bullet_spawn_time, self.bulletito)
+        gatling_bullet_spawn_time = random.randint(15, 150)
+        self.set_timer(gatling_bullet_spawn_time, self.bulletito)
