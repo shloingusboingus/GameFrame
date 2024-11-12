@@ -19,14 +19,14 @@ class metatitoo(RoomObject):
         self.set_image(image,75,50)
 
         # set up the bullet spawn timer
-        gatling_bullet_spawn_time = random.randint(50,1500)
+        gatling_bullet_spawn_time = random.randint(10,150)
         self.set_timer(gatling_bullet_spawn_time, self.bulletito)
 
         # collision with player
         self.register_collision_object("babum")
 
          # set movement
-        self.set_direction(90, 0.1) 
+        self.set_direction(90, 0.5) 
         #self.y_speed = random.choice([-10,10])
         
     def keep_in_room(self):
@@ -55,7 +55,7 @@ class metatitoo(RoomObject):
         self.room.add_room_object(new_bulletito)
         
         #WRONG LEVEEERR
-        gatling_bullet_spawn_time = random.randint(1, 1)
+        gatling_bullet_spawn_time = random.randint(150, 200)
         self.set_timer(gatling_bullet_spawn_time, self.bulletito)
 
     def handle_collision(self, other, other_type):        

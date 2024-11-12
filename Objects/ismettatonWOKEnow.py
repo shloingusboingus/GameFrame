@@ -22,7 +22,7 @@ class metatito(RoomObject):
         self.register_collision_object("babum")
 
          # set movement
-        self.set_direction(90, 0.1)
+        self.set_direction(90, 0.5)
         # self.y_speed = random.choice([-10,10])
         
     def keep_in_room(self):

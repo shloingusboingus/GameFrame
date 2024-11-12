@@ -7,3 +7,5 @@ from Objects.ismettatonWOKEnow import metatito
 from Objects.metagun import BONETROUSEL
 from Objects.YEEHAW import Lovecraft
 from Objects.METAphysics import metatitoo
+from Objects.METAmonstrosities import metatitooo
+from Objects.Sweetheart import mania

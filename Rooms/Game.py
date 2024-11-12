@@ -15,14 +15,14 @@ class Game(Level):
         # add HEART (player)
         self.add_room_object(babum(self, 600, 745))
         
-        # add metatito (top row)
+        # add metatitoo (top row)
         self.add_room_object(metatitooo(self, 500, 50))
         self.add_room_object(metatitooo(self, 585, 50))
         self.add_room_object(metatitooo(self, 670, 50))
         self.add_room_object(metatitooo(self, 755, 50))
         
 
-        # add metatito (middle row)
+        # add metatitoo (upper middle row)
         self.add_room_object(metatitoo(self, 350, 110))
         self.add_room_object(metatitoo(self, 465, 110))
         self.add_room_object(metatitoo(self, 550, 110))
@@ -31,6 +31,31 @@ class Game(Level):
         self.add_room_object(metatitoo(self, 830, 110))
         
 
+
+        # add metatito (middle row)
+        self.add_room_object(metatito(self, 340, 170))
+        self.add_room_object(metatito(self, 465, 170))
+        self.add_room_object(metatito(self, 550, 170))
+        self.add_room_object(metatito(self, 640, 170))
+        self.add_room_object(metatito(self, 730, 170))
+        self.add_room_object(metatito(self, 830, 170))
+
+           # add metatito (lower middle row)
+        self.add_room_object(metatito(self, 340, 230))
+        self.add_room_object(metatito(self, 465, 230))
+        self.add_room_object(metatito(self, 550, 230))
+        self.add_room_object(metatito(self, 640, 230))
+        self.add_room_object(metatito(self, 730, 230))
+        self.add_room_object(metatito(self, 830, 230))
+
+
+        # add metatito (lower middle row)
+        self.add_room_object(metatito(self, 340, 290))
+        self.add_room_object(metatito(self, 465, 290))
+        self.add_room_object(metatito(self, 550, 290))
+        self.add_room_object(metatito(self, 640, 290))
+        self.add_room_object(metatito(self, 730, 290))
+        self.add_room_object(metatito(self, 830, 290))
 
         # add metatito (bottom row)
         self.add_room_object(metatito(self, 340, 170))

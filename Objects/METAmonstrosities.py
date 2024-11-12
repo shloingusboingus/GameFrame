@@ -5,7 +5,7 @@
 from GameFrame import RoomObject, Globals
 import random
 from Objects.metagun import BONETROUSEL
-import random
+from Objects.Sweetheart import mania
 
 #la alphys put ghost in robot
 class metatitooo(RoomObject):
@@ -49,3 +49,8 @@ class metatitooo(RoomObject):
         if self.y + self.height < 0:
             print("byyyyyeeeee")
             self.room.delete_object(self)
+    
+         # create buff
+    def createbuff(self):
+        if metatitooo.register_collision_object("Lovecraft"):
+           speed_buff = mania(self.room, self.x, self.y)
