@@ -24,7 +24,7 @@ class BONETROUSEL(RoomObject):
         self.outside_of_room()
         
     def outside_of_room(self):
-        if self.x + self.width < 0:
+        if self.y + self.height < 0:
             print("Bullet redirected into american school")
             self.room.delete_object(self)
             

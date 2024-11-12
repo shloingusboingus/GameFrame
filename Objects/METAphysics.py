@@ -22,8 +22,12 @@ class metatitoo(RoomObject):
         gatling_bullet_spawn_time = random.randint(50,1500)
         self.set_timer(gatling_bullet_spawn_time, self.bulletito)
 
+        # collision with player
+        self.register_collision_object("babum")
+
          # set movement
-       # self.x_speed = random.choice([-10,10])
+        self.set_direction(90, 0.1) 
+        #self.y_speed = random.choice([-10,10])
         
     def keep_in_room(self):
         if self.x < 380:
@@ -35,7 +39,14 @@ class metatitoo(RoomObject):
             
     def step(self):
         self.keep_in_room()
+        self.outside_of_room()
         
+    def outside_of_room(self):
+        if self.y + self.height < 0:
+            print("byyyyyeeeee")
+            self.room.delete_object(self)
+
+
         # PULL THE LEVER KRONK
     def bulletito(self):
         
@@ -44,5 +55,11 @@ class metatitoo(RoomObject):
         self.room.add_room_object(new_bulletito)
         
         #WRONG LEVEEERR
-        gatling_bullet_spawn_time = random.randint(150, 250)
+        gatling_bullet_spawn_time = random.randint(1, 1)
         self.set_timer(gatling_bullet_spawn_time, self.bulletito)
+
+    def handle_collision(self, other, other_type):        
+        if other_type == "babum":
+            Globals.next_level = Globals.levels.index('Starter')
+            #stop this level so it goes to the next
+            self.room.running = False

@@ -17,6 +17,8 @@ class Lovecraft(RoomObject):
 
         #collision with enemy targets/enemy projectiles
         self.register_collision_object("metatito")
+        self.register_collision_object("metatitoo")
+        self.register_collision_object("metatitooo")
         #self.register_collision_object("BONETROUSEL")
         
     def step(self):
@@ -29,6 +31,6 @@ class Lovecraft(RoomObject):
             
     #  event handlers
     def handle_collision(self, other, other_type):
-        if other_type == "metatito":
+        if other_type == "metatito" or "metatitoo" or "metatitooo":
             self.room.delete_object(other)
             self.room.delete_object(self)
