@@ -25,7 +25,7 @@ class BONETROUSEL(RoomObject):
         
     def outside_of_room(self):
         if self.y + self.height < 0:
-            print("Bullet redirected into american school")
+            print("Bullet redirected to me")
             self.room.delete_object(self)
             
     def handle_collision(self, other, other_type):        
