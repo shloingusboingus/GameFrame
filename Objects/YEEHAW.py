@@ -1,6 +1,7 @@
 #player projectile 
 
 from GameFrame import RoomObject, Globals
+from Objects.Sweetheart import mania
 
 class Lovecraft(RoomObject):
     
@@ -32,5 +33,10 @@ class Lovecraft(RoomObject):
     #  event handlers
     def handle_collision(self, other, other_type):
         if other_type == "metatito" or "metatitoo" or "metatitooo":
+            if other_type == "metatitooo":
+                buffy_wuffy_uwu = mania(self.room, self.x, self.y)
+                print("buffy wuffy uwu")
+                self.room.add_room_object(buffy_wuffy_uwu)
+            self.room.delete_object(self)
             self.room.delete_object(other)
             self.room.delete_object(self)

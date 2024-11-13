@@ -9,11 +9,11 @@ class mania(RoomObject):
         RoomObject.__init__(self,room,x,y)
         
         # set image
-        image = self.load_image("sweetie")
+        image = self.load_image("sweetie.png")
         self.set_image(image,50,49)
         
         # set travel direction
-        self.set_direction(180, 5)
+        self.set_direction(90, 5)
         
         # handle events
         self.register_collision_object("babum")

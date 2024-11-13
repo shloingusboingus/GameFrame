@@ -42,9 +42,11 @@ class metatitoo(RoomObject):
         self.outside_of_room()
         
     def outside_of_room(self):
-        if self.y + self.height < 0:
+        if self.y + self.height > Globals.SCREEN_HEIGHT:
             print("byyyyyeeeee")
             self.room.delete_object(self)
+            Globals.next_level = Globals.levels.index('Starter')
+            self.room.running = False
 
 
         # PULL THE LEVER KRONK

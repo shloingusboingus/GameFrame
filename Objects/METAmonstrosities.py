@@ -20,7 +20,6 @@ class metatitooo(RoomObject):
         self.set_image(image,75,50)
 
         # collision with player
-        self.register_collision_object("babum")
 
          # set movement
         self.set_direction(90, 0.1)
@@ -35,20 +34,24 @@ class metatitooo(RoomObject):
            # self.x_speed *= -1
             
     def step(self):
-        self.keep_in_room()
+        #self.keep_in_room()
         self.outside_of_room()
 
                    
-    def handle_collision(self, other, other_type):        
-        if other_type == "babum":
-            Globals.next_level = Globals.levels.index('Starter')
-            #stop this level so it goes to the next
-            self.room.running = False
+    def handle_collision(self, other, other_type):
+        print(other_type)     
+        if other_type == "Lovecraft":
+            buffy_wuffy_uwu = mania(self.room, self.x, self.y)
+            print("buffy wuffy uwu")
+            self.room.add_object(buffy_wuffy_uwu)
+            self.room.delete_object(self)
 
     def outside_of_room(self):
-        if self.y + self.height < 0:
+        if self.y + self.height > Globals.SCREEN_HEIGHT:
             print("byyyyyeeeee")
             self.room.delete_object(self)
+            Globals.next_level = Globals.levels.index('Starter')
+            self.room.running = False
     
          # create buff
     def createbuff(self):
