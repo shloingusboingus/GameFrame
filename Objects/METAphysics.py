@@ -26,7 +26,7 @@ class metatitoo(RoomObject):
         self.register_collision_object("babum")
 
          # set movement
-        self.set_direction(90, 0.5) 
+        self.set_direction(90, 0.3) 
         #self.y_speed = random.choice([-10,10])
         
     def keep_in_room(self):
@@ -50,8 +50,7 @@ class metatitoo(RoomObject):
 
 
         # PULL THE LEVER KRONK
-    def bulletito(self):
-        
+    def bulletito(self): 
         #birth of the darkness
         new_bulletito = BONETROUSEL(self.room, self.x, self.y + self.height/2)
         self.room.add_room_object(new_bulletito)

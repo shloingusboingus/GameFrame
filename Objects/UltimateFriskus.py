@@ -23,9 +23,9 @@ class babum(RoomObject):
 #MOVE  
     def key_pressed(self, key):
         if key[pygame.K_LEFT]:
-            self.x -= 5
+            self.x -= 3
         elif key[pygame.K_RIGHT]:
-            self.x += 5
+            self.x += 3
         if key[pygame.K_SPACE]:
             self.bopbopbop()
 
@@ -47,7 +47,7 @@ class babum(RoomObject):
                             self.y + self.width/2 - 4)
             self.room.add_room_object(new_bullet)
             self.can_shoot = False
-            self.set_timer(18,self.reload)
+            self.set_timer(20,self.reload)
             
     def reload(self):
         self.can_shoot = True
