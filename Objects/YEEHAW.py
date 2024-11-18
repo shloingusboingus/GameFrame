@@ -34,9 +34,9 @@ class Lovecraft(RoomObject):
     def handle_collision(self, other, other_type):
         if other_type == "metatito" or "metatitoo" or "metatitooo":
             if other_type == "metatitooo":
-                buffy_wuffy_uwu = mania(self.room, self.x, self.y)
-                print("buffy wuffy uwu")
-                self.room.add_room_object(buffy_wuffy_uwu)
+                hope = mania(self.room, self.x, self.y)
+                print("collided with special thing")
+                self.room.add_room_object(hope)
             self.room.delete_object(self)
             self.room.delete_object(other)
             self.room.delete_object(self)

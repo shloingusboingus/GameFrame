@@ -19,7 +19,6 @@ class metatitooo(RoomObject):
         image = self.load_image("metatit.webp")
         self.set_image(image,75,50)
 
-        # collision with player
 
          # set movement
         self.set_direction(90, 0.1)
@@ -30,8 +29,7 @@ class metatitooo(RoomObject):
             self.x = 380
         elif self.x > 880:
             self.x = 880
-          #if self.x < 380 or self.x > 880 - self.width:
-           # self.x_speed *= -1
+
             
     def step(self):
         #self.keep_in_room()
@@ -41,9 +39,9 @@ class metatitooo(RoomObject):
     def handle_collision(self, other, other_type):
         print(other_type)     
         if other_type == "Lovecraft":
-            buffy_wuffy_uwu = mania(self.room, self.x, self.y)
-            print("buffy wuffy uwu")
-            self.room.add_object(buffy_wuffy_uwu)
+            hope = mania(self.room, self.x, self.y)
+            print("help")
+            self.room.add_object(hope)
             self.room.delete_object(self)
 
     def outside_of_room(self):

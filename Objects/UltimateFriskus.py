@@ -1,6 +1,7 @@
 #player!!!
 from GameFrame import RoomObject, Globals
 from Objects.YEEHAW import Lovecraft
+from Objects.Sweetheart import mania
 import pygame
 
 #BIRTH OF A GOD
@@ -19,6 +20,7 @@ class babum(RoomObject):
         #projectile shoot
         self.can_shoot = True
 
+        self.register_collision_object("mania")
 
 #MOVE  
     def key_pressed(self, key):
@@ -48,6 +50,7 @@ class babum(RoomObject):
             self.room.add_room_object(new_bullet)
             self.can_shoot = False
             self.set_timer(20,self.reload)
+
             
     def reload(self):
         self.can_shoot = True

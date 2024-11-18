@@ -1,4 +1,6 @@
 #speed buff
+#genuinely could not for the life of me find a way for it to change anything, or generally interact with anything so i gave up on it to give me more time to do the rest of my game since i genuinely, wholeheartedly do not know how to code
+#still spawns, just doesn't do nothing
 
 from GameFrame import RoomObject
 
@@ -27,7 +29,15 @@ class mania(RoomObject):
         # ship collision
         if other_type == "babum":
             self.room.delete_object(self)
-            
+            print("buff")
+
+    def buff_effect(self, other, other_type):
+        self.handle_collision(self, other, other_type)
+        other.bopbopbop(
+             other.set_timer(- 10, other.reload))
+ 
+
+
     def outside_of_room(self):
         if self.x + self.width < 0:
             self.room.delete_object(self)
