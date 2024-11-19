@@ -11,6 +11,7 @@ class Globals:
 
     # - Set the starting number of lives - #
     LIVES = 3
+    ENEMY_LIVES = 2
 
     # - Set the Window display name - #
     window_name = 'Heart of Gold'

@@ -1,9 +1,10 @@
 #gameplay room :|
-from GameFrame import Level
+from GameFrame import Level, Globals
 from Objects.UltimateFriskus import babum
 from Objects.ismettatonWOKEnow import metatito
 from Objects.METAphysics import metatitoo
 from Objects.METAmonstrosities import metatitooo
+from Objects.ifrewup import Livvy, dun
 
 class Game(Level):
     def __init__(self, screen, joysticks):
@@ -64,3 +65,6 @@ class Game(Level):
         self.add_room_object(metatito(self, 640, 170))
         self.add_room_object(metatito(self, 730, 170))
         self.add_room_object(metatito(self, 830, 170))
+
+        self.lives = Livvy(self, Globals.SCREEN_WIDTH - 150, 20)
+        self.add_room_object(self.lives)

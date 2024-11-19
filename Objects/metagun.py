@@ -25,11 +25,15 @@ class BONETROUSEL(RoomObject):
         
     def outside_of_room(self):
         if self.y + self.height < 0:
-            print("Bullet redirected to my head - hopefully")
+            print("Bullet gone")
             self.room.delete_object(self)
             
     def handle_collision(self, other, other_type):        
         if other_type == "babum":
-            Globals.next_level = Globals.levels.index('Starter')
-            #stop this level so it goes to the next
-            self.room.running = False
+            self.room.delete_object(self)
+            Globals.LIVES -= 1
+            if Globals.LIVES > 0:
+                self.room.lives.update_image()
+            else:
+                Globals.next_level = Globals.levels.index('Starter')
+                self.room.running = False

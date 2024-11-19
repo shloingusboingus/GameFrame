@@ -40,3 +40,12 @@ class Lovecraft(RoomObject):
             self.room.delete_object(self)
             self.room.delete_object(other)
             self.room.delete_object(self)
+
+    def handle_collision(self, other, other_type):        
+        if other_type == "metatito":
+            self.room.delete_object(self)
+            Globals.ENEMY_LIVES -= 1
+            if Globals.ENEMY_LIVES > 0:
+                self.delete_object("metatito")
+            else:
+                self.room.delete_object("metatito")
